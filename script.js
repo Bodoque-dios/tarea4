@@ -39,10 +39,12 @@ function init ()
     /* Funciones para la navbar */
     var mobileMenuButton = document.getElementById("mobileMenuButton");
     mobileMenuButton.onclick = function() {
-        document.getElementById("sideMenuHideOnMobile").classList.toggle("-translate-y-full");
-        document.getElementById("sideMenuHideOnMobile").classList.toggle("translate-y-28");
-        document.getElementById("sideMenuHideOnMobile").classList.toggle("mt-12");
-        document.getElementById("sideMenuHideOnMobile").classList.toggle("shadow-xl");
+        var navHeight = document.getElementById("mainNavBackground").clientHeight + 48
+        console.log(navHeight);
+        document.getElementById("mainMenuHideOnMobile").classList.toggle("-translate-y-full");
+        document.getElementById("mainMenuHideOnMobile").classList.toggle("translate-y-["+navHeight+"px]");
+        document.getElementById("mainMenuHideOnMobile").classList.toggle("mt-12");
+        document.getElementById("mainMenuHideOnMobile").classList.toggle("shadow-xl");
         document.getElementById("mobileMenuButtonClose").classList.toggle("hidden");
         document.getElementById("mobileMenuButtonOpen").classList.toggle("hidden");
     }
@@ -50,9 +52,9 @@ function init ()
     var theElementContainer = document.getElementsByTagName("nav")[0];
     document.addEventListener('click', function(event) {
         if (!theElementContainer.contains(event.target)) {
-            document.getElementById("sideMenuHideOnMobile").classList.add("-translate-y-full");
-            document.getElementById("sideMenuHideOnMobile").classList.remove("mt-12");
-            document.getElementById("sideMenuHideOnMobile").classList.remove("shadow-xl");
+            document.getElementById("mainMenuHideOnMobile").classList.add("-translate-y-full");
+            document.getElementById("mainMenuHideOnMobile").classList.remove("mt-12");
+            document.getElementById("mainMenuHideOnMobile").classList.remove("shadow-xl");
             document.getElementById("mobileMenuButtonOpen").classList.remove("hidden");
             document.getElementById("mobileMenuButtonClose").classList.add("hidden");
         }

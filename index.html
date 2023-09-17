@@ -32,7 +32,7 @@
     </div>
 
     <!-- omidios -->
-    <nav class="bg-black shadow h-28 md:h-auto fixed z-10 mx-auto inset-x-0 top-0 flex justify-between items-center">
+    <nav id="mainNavBackground" class="bg-black shadow h-28 md:h-auto fixed z-10 mx-auto inset-x-0 top-0 flex justify-between items-center">
         
         <a href="#" class=" m-4 uppercase inline-flex bg-white p-3 rounded-lg items-center hover:p-6 transition-all duration-500">
             <span class="text-4xl font-black mr-2">MIB</span>
@@ -50,15 +50,27 @@
         </button>
     
     <!-- List of nav item -->
-        <div id="sideMenuHideOnMobile" class="bg-white font-semibold z-10 rounded-md flex transition-all duration-500 transform translate-x-0 w-1/2 md:w-auto md:h-16 px-3 md:px-0 flex-col md:flex-row -translate-y-full md:translate-y-0 md:mt-1 md:items-center md:mx-1 md:uppercase items-center absolute right-4 md:relative">
-            
-            <a href="#" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0 ">Project</a>
-            <span class=" md:bg-black w-px p-px h-full md:bg-black"></span> <!-- Separator TODO: -->
-            <a href="#" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">Resource</a>
-            <span class=" md:bg-black w-px p-px h-full md:bg-black"></span> <!-- Separator TODO: -->
-            <a href="#" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0 ">About</a>
-            <span class=" md:bg-black w-px p-px h-full md:bg-black"></span> <!-- Separator TODO: -->
-            <a  id="lang" href="/alien/index.html" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0 ">
+        
+        <div id="mainMenuHideOnMobile" class="bg-white font-semibold z-10 rounded-md flex transition-all duration-500 transform translate-x-0 w-1/2 md:w-auto md:h-16 px-3 md:px-0 flex-col md:flex-row -translate-y-full md:translate-y-0 md:mt-1 md:items-center md:mx-1 md:uppercase items-center absolute md:relative right-4 py-4">
+                <a href="#" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0 ">Project</a>
+                <span class=" md:bg-black w-px p-px h-full md:bg-black"></span> <!-- Separator TODO: -->
+                <a href="#" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">Resource</a>
+                <span class=" md:bg-black w-px p-px h-full md:bg-black"></span> <!-- Separator TODO: -->
+                <a href="#" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0 ">About</a>
+                <a  id="lang" href="/alien/index.html" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent sm:p-0 md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                        <path d="M3.6 9h16.8" />
+                        <path d="M3.6 15h16.8" />
+                        <path d="M11.5 3a17 17 0 0 0 0 18" />
+                        <path d="M12.5 3a17 17 0 0 1 0 18" />
+                    </svg>
+                </a>
+            </div>
+
+        <div id="langChange" class="m-4 p-2 md:h-16 hidden md:flex items-center bg-white rounded-md  ">
+            <a  id="lang" href="/alien/index.html" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent sm:p-0">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
