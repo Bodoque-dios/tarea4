@@ -40,7 +40,6 @@ function init ()
     var mobileMenuButton = document.getElementById("mobileMenuButton");
     mobileMenuButton.onclick = function() {
         var navHeight = document.getElementById("mainNavBackground").clientHeight + 48
-        console.log(navHeight);
         document.getElementById("mainMenuHideOnMobile").classList.toggle("-translate-y-full");
         document.getElementById("mainMenuHideOnMobile").classList.toggle("translate-y-["+navHeight+"px]");
         document.getElementById("mainMenuHideOnMobile").classList.toggle("mt-12");
@@ -60,6 +59,14 @@ function init ()
         }
     });
     
-  
+   
 
 }
+
+function showHiddenDescription(evt) {
+    evt.target.parentNode.parentNode.children[1].classList.toggle("hidden");
+    document.getElementById("body").classList.toggle("overflow-hidden");
+}
+
+
+

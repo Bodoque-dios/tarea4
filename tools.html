@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>MIB</title>
+</head>
+
+<body id="body">
+
+    <header>
+
+        <!-- omidios -->
+        <nav id="mainNavBackground"
+            class="bg-black shadow h-28 md:h-auto z-10 mx-auto inset-x-0 top-0 flex justify-between items-center block">
+
+            <a href="#"
+                class=" m-4 uppercase inline-flex bg-white p-3 rounded-lg items-center hover:p-6 transition-all duration-500">
+                <span class="text-4xl font-black mr-2">MIB</span>
+                <img width="48" height="48"
+                    src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/96/external-glyph-travel-tanah-basah-glyph-tanah-basah-75.png"
+                    alt="external-glyph-travel-tanah-basah-glyph-tanah-basah-75" />
+            </a>
+
+            <button id="mobileMenuButton" class="p-3 focus:outline-none md:hidden bg-white rounded-md absolute right-4"
+                title="Open side menu">
+                <!-- SVG For "x" button -->
+                <svg id="mobileMenuButtonClose" class="w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <!-- SVG For "Menu burger" button -->
+                <svg id="mobileMenuButtonOpen" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- List of nav item -->
+            <!--TODO: CENTRAR ESTO-->
+            <div id="mainMenuHideOnMobile"
+                class="bg-white font-semibold z-10 rounded-md flex transition-all duration-500 transform translate-x-0 w-1/2 md:w-auto md:h-16 px-3 md:px-0 flex-col md:flex-row -translate-y-full md:translate-y-0 md:mt-1 md:items-center md:mx-1 md:uppercase items-center absolute md:relative right-4 py-4">
+                <a href="#"
+                    class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0 ">Project</a>
+                <span class=" md:bg-black w-px p-px h-full md:bg-black"></span> <!-- Separator -->
+                <a href="tools.html"
+                    class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">Tools</a>
+                <span class=" md:bg-black w-px p-px h-full md:bg-black"></span> <!-- Separator -->
+                <a href="#"
+                    class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0 ">About</a>
+                <a id="lang" href="/alien/index.html"
+                    class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent sm:p-0 md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="28"
+                        height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                        <path d="M3.6 9h16.8" />
+                        <path d="M3.6 15h16.8" />
+                        <path d="M11.5 3a17 17 0 0 0 0 18" />
+                        <path d="M12.5 3a17 17 0 0 1 0 18" />
+                    </svg>
+                </a>
+            </div>
+
+            <div id="langChange" class="m-4 p-2 md:h-16 hidden md:flex items-center bg-white rounded-md  ">
+                <a id="lang" href="/alien/index.html" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent sm:p-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="28"
+                        height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                        <path d="M3.6 9h16.8" />
+                        <path d="M3.6 15h16.8" />
+                        <path d="M11.5 3a17 17 0 0 0 0 18" />
+                        <path d="M12.5 3a17 17 0 0 1 0 18" />
+                    </svg>
+                </a>
+            </div>
+
+        </nav>
+
+    </header>
+    <main>
+        <section id="fuelCalculator" class="mb-10">
+
+            <h2 class="text-4xl m-4 mb-6" >Fuel Calculator</h2>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center">
+                <div class="flex flex-col justify-center items-center">
+                    <label for="fuelType" class="text-2xl">Fuel Type</label>
+                    <select name="fuelType" id="fuelType" class="w-48 h-12 text-2xl md:mx-2">
+                        <option value="gasoline">Plasma Quarks</option>
+                        <option value="diesel">Antimatter Core</option>
+                        <option value="2">Hopes and dreams</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col justify-center items-center md:mx-2">
+                    <label for="fuelPrice" class="text-2xl">Fuel Price</label>
+                    <input type="number" name="fuelPrice" id="fuelPrice" class="border-solid border-2 w-48 h-12 text-2xl items-center md:mx-2">
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <label for="fuelConsumption" class="text-2xl">Fuel Consumption</label>
+                    <input type="number" name="fuelConsumption" id="fuelConsumption" class=" border-solid border-2 w-48 h-12 text-2xl md:mx-2">
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <label for="fuelDistance" class="text-2xl">Distance</label>
+                    <input type="number" name="fuelDistance" id="fuelDistance" class="border-solid border-2 w-48 h-12 text-2xl md:mx-2">
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <label for="fuelResult" class="text-2xl">Result</label>
+                    <input type="number" name="fuelResult" id="fuelResult" class="border-solid border-2 w-48 h-12 text-2xl md:mx-2" readonly>
+                </div>
+        </section>
+
+        <section id="ageCalculator" class="mb-10">
+            <h2 class="text-4xl m-4 mb-6"> Age Calculator</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center">
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="w-48 h-12 text-2xl"> Time Dialation Factor</h2>
+                    <div class="flex">
+                        <div class="flex flex-col justify-center items-center">
+                            <label for="ageDate" class="text-2xl">Original</label>
+                            <input type="number" name="ageDate" id="ageDate" class="w-48 h-12 text-2xl border-solid border-2 mx-2">
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <label for="ageDate" class="text-2xl">Actual</label>
+                            <input type="number" name="ageDate" id="ageDate" class="w-48 h-12 text-2xl border-solid border-2 mx-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="w-48 h-12 text-2xl">Age</h2>
+                    <div class="flex">
+                        <div class="flex flex-col justify-center items-center">
+                            <label for="ageDate" class="text-2xl">Original</label>
+                            <input type="number" name="ageDate" id="ageDate" class="w-48 h-12 text-2xl border-solid border-2 mx-2">
+                        </div>
+                        
+                        <div class="flex flex-col justify-center items-center">
+                            <label for="ageResult" class="text-2xl">Actual</label>
+                            <input type="number" name="ageResult" id="ageResult" class="w-48 h-12 text-2xl border-solid border-2 mx-2" readonly>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <button onclick="changeLang()">adfsdsfdsfsdf</button>
+    <p id="debug">a</p>
+
+    <script>
+        init()
+    </script>
+</body>
+
+</html>
