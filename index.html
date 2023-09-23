@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/normalize.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>MIB</title>
 </head>
@@ -61,7 +60,6 @@
             </button>
 
             <!-- List of nav item -->
-            <!--TODO: CENTRAR ESTO-->
             <div id="mainMenuHideOnMobile"
                 class="bg-white font-semibold z-10 rounded-md flex transition-all duration-500 transform translate-x-0 w-1/2 md:w-auto md:h-16 px-3 md:px-0 flex-col md:flex-row -translate-y-full md:translate-y-0 md:mt-1 md:items-center md:mx-1 md:uppercase items-center absolute md:relative right-4 py-4">
                 <a href="index.html"
@@ -70,7 +68,7 @@
                 <a href="tools.html"
                     class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">Tools</a>
                 <span class=" md:bg-black w-px p-px h-full md:bg-black"></span> <!-- Separator -->
-                <a href="#"
+                <a href="about.html"
                     class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0 ">About</a>
                 <a id="lang" href="/alien/index.html"
                     class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent sm:p-0 md:hidden">
@@ -107,64 +105,54 @@
     </header>
     <main>
 
-
-        <!-- ta wena la página de la cia -->
-
-
-        <!-- Fake news about aliens n shit -->
         <section id="news-carrousel" class="flex flex-col space-between mb-10">
-
-
             <h2 class="text-4xl m-4 mb-6">Intergalactic News</h2>
-
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 m-auto">
 
                 <div class="news m-4 border-solid border-2 border-black ">
-                    <div class="card flex flex-col place-items-center">
-                        <img src="https://picsum.photos/300" alt="" onclick="toggleHiddenDescription('news-1')">
-                        <h2 class="m-2"> AQUI VA EL TITULO</h2>
+                    <div class=" card flex flex-col place-items-center">
+                        <img  class="w-full h-[300px]" src="media/3.webp" alt="" onclick="toggleHiddenDescription('news-1')">
+                        <h2 class="m-2">Alien Diplomacy Summit Concludes Peacefully</h2>
                     </div>
                 </div>
 
                 <div class="news m-4 border-solid border-2 border-black ">
                     <div class="card flex flex-col place-items-center">
-                        <img src="https://picsum.photos/300" alt="" onclick="toggleHiddenDescription('news-2')">
-                        <h2 class="m-2"> AQUI VA EL TITULO</h2>
+                        <img  class="w-full h-[300px]" src="media/4.webp" alt="" onclick="toggleHiddenDescription('news-2')">
+                        <h2 class="m-2">Interdimensional Art Exhibit Mesmerizes Audiences</h2>
                     </div>
                 </div>
                 <div class="news m-4 border-solid border-2 border-black ">
                     <div class="card flex flex-col place-items-center">
-                        <img src="https://picsum.photos/300" alt="" onclick="toggleHiddenDescription('news-3')">
-                        <h2 class="m-2"> AQUI VA EL TITULO</h2>
+                        <img  class="w-full h-[300px]" src="media/6.webp" alt="" onclick="toggleHiddenDescription('news-3')">
+                        <h2 class="m-2">Intergalactic Travel Agency Opens New Cosmic Routes</h2>
                     </div>
                 </div>
                 <div class="news m-4 border-solid border-2 border-black ">
                     <div class="card flex flex-col place-items-center">
-                        <img src="https://picsum.photos/300" alt="" onclick="toggleHiddenDescription('news-4')">
-                        <h2 class="m-2"> AQUI VA EL TITULO</h2>
+                        <img  class="w-full h-[300px]" src="media/5.webp" alt="" onclick="toggleHiddenDescription('news-4')">
+                        <h2 class="m-2">Celestial Fashion Trends: The Latest in Cosmic Couture</h2>
                     </div>
                 </div>
                 <div class="news m-4 border-solid border-2 border-black ">
                     <div class="card flex flex-col place-items-center">
-                        <img src="https://picsum.photos/300" alt="" onclick="toggleHiddenDescription('news-5')">
-                        <h2 class="m-2"> AQUI VA EL TITULO</h2>
+                        <img  class="w-full h-[300px]" src="media/1.webp" alt="" onclick="toggleHiddenDescription('news-5')">
+                        <h2 class="m-2">Alien Conservation Efforts Preserve Endangered Species</h2>
                     </div>
                 </div>
                 <div class="news m-4 border-solid border-2 border-black ">
                     <div class="card flex flex-col place-items-center">
-                        <img src="https://picsum.photos/300" alt="" onclick="toggleHiddenDescription('news-6')">
-                        <h2 class="m-2"> AQUI VA EL TITULO</h2>
+                        <img  class="w-full h-[300px]" src="media/7.webp" alt="" onclick="toggleHiddenDescription('news-6')">
+                        <h2 class="m-2">Solar Flare Threat Averted, Thanks to MiB Agents</h2>
                     </div>
                 </div>
-                
             </div>
         </section>
 
         
         <!-- Report An Alien Sighting -->
-        <section class="bg-black text-white flex justify-center items-center py-12">
-            <form id="alienForm" onsubmit="alert('Alien reported Succesfully')" class="w-full max-w-lg p-4 bg-gray-800 rounded-lg shadow-lg">
+        <section class="bg-gray-100 text-white flex justify-center items-center py-12">
+            <form id="alienForm" onsubmit="alert('Alien reported Succesfully!')" class="w-full max-w-lg p-4 bg-gray-800 rounded-lg shadow-lg">
             <h2 class="text-3xl font-semibold mb-4 text-center text-green-500">Report An Alien Sighting</h2>
         
             <div class="mb-4">
@@ -200,7 +188,7 @@
 
     <section id="hidden-news" class="dont-blur">
         <div id="news-1" class="dont-blur hidden absolute bottom-1/2 right-1/2 border-solid border-2 border-black z-10 translate-x-1/2 translate-y-1/2 bg-white text-black flex">
-            <img src="https://picsum.photos/300" alt="">
+            <img class="h-[300px]" src="media/3.webp" alt="">
             <div class="m-2">
                 <svg onclick="toggleHiddenDescription('news-1')" class="w-6 h-6 absolute right-0 m-2 hover:bg-gray-200 rounded-md " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
@@ -208,17 +196,15 @@
                         d="M6 18L18 6M6 6l12 12" />
                 </svg>
                 <div class="m-2 pt-12 flex flex-col">
-                    <h2 class="mb-4"> AQUI VA EL TITULO</h2>
+                    <h2 class="mb-4 text-xl">Alien Diplomacy Summit Concludes Peacefully</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laborum veniam debitis
-                        eaque ex in minus illum temporibus distinctio, excepturi recusandae fugiat?
-                        Veritatis, vero sint. Et, temporibus vero! Quas, aspernatur.
+                        In a historic event, intergalactic leaders from diverse civilizations wrapped up a week-long summit aimed at fostering peaceful coexistence and collaboration among star systems. The delegates engaged in diplomatic dialogues and signed treaties to ensure interstellar harmony.
                     </p>
                 </div>
             </div>
         </div>
         <div id="news-2" class="dont-blur hidden absolute bottom-1/2 right-1/2 border-solid border-2 border-black z-10 translate-x-1/2 translate-y-1/2 bg-white text-black flex">
-            <img src="https://picsum.photos/300" alt="">
+            <img class="h-[300px]" src="media/4.webp" alt="">
             <div class="m-2">
                 <svg onclick="toggleHiddenDescription('news-2')" class="w-6 h-6 absolute right-0 m-2 hover:bg-gray-200 rounded-md " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
@@ -226,17 +212,15 @@
                         d="M6 18L18 6M6 6l12 12" />
                 </svg>
                 <div class="m-2 pt-12 flex flex-col">
-                    <h2 class="mb-4"> AQUI VA EL TITULO</h2>
+                    <h2 class="mb-4 text-xl">Interdimensional Art Exhibit Mesmerizes Audiences</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laborum veniam debitis
-                        eaque ex in minus illum temporibus distinctio, excepturi recusandae fugiat?
-                        Veritatis, vero sint. Et, temporibus vero! Quas, aspernatur.
+                        Visitors to an otherworldly art exhibit are left in awe as they explore mind-bending artworks that challenge the boundaries of reality. The exhibit, featuring artists from parallel dimensions, has sparked philosophical discussions about the nature of existence.
                     </p>
                 </div>
             </div>
         </div>
         <div id="news-3" class="dont-blur hidden absolute bottom-1/2 right-1/2 border-solid border-2 border-black z-10 translate-x-1/2 translate-y-1/2 bg-white text-black flex">
-            <img src="https://picsum.photos/300" alt="">
+            <img class="h-[300px]" src="media/6.webp" alt="">
             <div class="m-2">
                 <svg onclick="toggleHiddenDescription('news-3')" class="w-6 h-6 absolute right-0 m-2 hover:bg-gray-200 rounded-md " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
@@ -244,17 +228,15 @@
                         d="M6 18L18 6M6 6l12 12" />
                 </svg>
                 <div class="m-2 pt-12 flex flex-col">
-                    <h2 class="mb-4"> AQUI VA EL TITULO</h2>
+                    <h2 class="mb-4 text-xl"> Intergalactic Travel Agency Opens New Cosmic Routes</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laborum veniam debitis
-                        eaque ex in minus illum temporibus distinctio, excepturi recusandae fugiat?
-                        Veritatis, vero sint. Et, temporibus vero! Quas, aspernatur.
+                        Intrepid travelers can now embark on cosmic adventures like never before, thanks to a cutting-edge intergalactic travel agency. Newly established cosmic routes offer unparalleled access to distant galaxies and uncharted celestial wonders.
                     </p>
                 </div>
             </div>
         </div>
         <div id="news-4" class="dont-blur hidden absolute bottom-1/2 right-1/2 border-solid border-2 border-black z-10 translate-x-1/2 translate-y-1/2 bg-white text-black flex">
-            <img src="https://picsum.photos/300" alt="">
+            <img class="h-[300px]" src="media/5.webp" alt="">
             <div class="m-2">
                 <svg onclick="toggleHiddenDescription('news-4')" class="w-6 h-6 absolute right-0 m-2 hover:bg-gray-200 rounded-md " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
@@ -262,17 +244,15 @@
                         d="M6 18L18 6M6 6l12 12" />
                 </svg>
                 <div class="m-2 pt-12 flex flex-col">
-                    <h2 class="mb-4"> AQUI VA EL TITULO</h2>
+                    <h2 class="mb-4 text-xl">Celestial Fashion Trends: The Latest in Cosmic Couture</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laborum veniam debitis
-                        eaque ex in minus illum temporibus distinctio, excepturi recusandae fugiat?
-                        Veritatis, vero sint. Et, temporibus vero! Quas, aspernatur.
+                        Fashionistas are embracing otherworldly styles as alien designers introduce cosmic couture. From shimmering space fabrics to holographic accessories, these avant-garde creations are taking the fashion world by storm.
                     </p>
                 </div>
             </div>
         </div>
         <div id="news-5" class="dont-blur hidden absolute bottom-1/2 right-1/2 border-solid border-2 border-black z-10 translate-x-1/2 translate-y-1/2 bg-white text-black flex">
-            <img src="https://picsum.photos/300" alt="">
+            <img class="h-[300px]" src="media/1.webp" alt="">
             <div class="m-2">
                 <svg onclick="toggleHiddenDescription('news-5')" class="w-6 h-6 absolute right-0 m-2 hover:bg-gray-200 rounded-md " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
@@ -280,17 +260,15 @@
                         d="M6 18L18 6M6 6l12 12" />
                 </svg>
                 <div class="m-2 pt-12 flex flex-col">
-                    <h2 class="mb-4"> AQUI VA EL TITULO</h2>
+                    <h2 class="mb-4 text-xl">Alien Conservation Efforts Preserve Endangered Species</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laborum veniam debitis
-                        eaque ex in minus illum temporibus distinctio, excepturi recusandae fugiat?
-                        Veritatis, vero sint. Et, temporibus vero! Quas, aspernatur.
+                        A compassionate coalition of aliens has united to protect endangered interstellar species facing extinction. Together, they are working tirelessly to ensure the survival of these unique and precious cosmic creatures.
                     </p>
                 </div>
             </div>
         </div>
         <div id="news-6" class="dont-blur hidden absolute bottom-1/2 right-1/2 border-solid border-2 border-black z-10 translate-x-1/2 translate-y-1/2 bg-white text-black flex">
-            <img src="https://picsum.photos/300" alt="">
+            <img class="h-[300px]" src="media/7.webp" alt="">
             <div class="m-2">
                 <svg onclick="toggleHiddenDescription('news-6')" class="w-6 h-6 absolute right-0 m-2 hover:bg-gray-200 rounded-md " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
@@ -298,11 +276,9 @@
                         d="M6 18L18 6M6 6l12 12" />
                 </svg>
                 <div class="m-2 pt-12 flex flex-col">
-                    <h2 class="mb-4"> AQUI VA EL TITULO</h2>
+                    <h2 class="mb-4 text-xl">Solar Flare Threat Averted, Thanks to MiB Agents</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laborum veniam debitis
-                        eaque ex in minus illum temporibus distinctio, excepturi recusandae fugiat?
-                        Veritatis, vero sint. Et, temporibus vero! Quas, aspernatur.
+                        Men in Black agents, known for their unwavering dedication to safeguarding our planet, successfully neutralized a menacing solar flare that could have had catastrophic consequences for Earth. Their swift action has once again protected our world from cosmic perils.
                     </p>
                 </div>
             </div>
@@ -310,7 +286,7 @@
 
     </section>
 
-    <footer class="bg-gray-800 text-white py-4">
+    <footer class="relative w-full bottom-0 bg-gray-800 text-white py-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-center md:text-left">
                 <p class="text-lg font-semibold">Not Men In Black</p>
