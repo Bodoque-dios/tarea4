@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Are You Human?</title>
+</head>
+<body class="bg-black ">
+    <div id="question" class=" min-h-screen flex flex-col items-center justify-center">
+        <h1 class="text-5xl  mb-8 text-white tracking-wide">Are you human?</h1>
+        <div class="space-x-4">
+            <button id="yesBtn" onclick="neuralyze()" class="text-2xl bg-lime-500 hover:bg-green-500  px-4 py-2 rounded-lg">Yes</button>
+            <button class="text-2xl bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg" onclick="filter()">No</button>
+        </div>
+    </div>
+
+    <div id="neuralyzer" class="neuralyzer hidden flex justify-center space-y-0">
+        <div class="dome absolute bottom-80 h-32 w-32 bg-neutral-400 rounded-full"></div>
+        <div class="red absolute bottom-[22rem] h-8 w-32 bg-red-500 z-10 animate-pulse" ></div>
+        <div class="stick absolute bottom-0 h-96 w-32  bg-neutral-300"></div>
+        <div id="flash" class="flash absolute bottom-[22rem] h-8 w-8 bg-white rounded-full z-20 opacity-0"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    function neuralyze(){
+        localStorage.setItem("filtered", false);
+        document.getElementById("question").classList.add("hidden");
+        document.getElementById("neuralyzer").classList.remove("hidden");
+        document.getElementById("flash").style.animation = "flash 0.3s ease-in 4s forwards";
+        setTimeout(function(){
+               window.location.href = "https://www.earth.com/news/aliens-dont-exist/";
+            },
+            5500);
+    }
+
+    function filter(){
+        localStorage.setItem("filtered", true);
+        window.location.href='../index.html'
+    }
+</script>
+<style>
+
+    @keyframes flash {
+        0% {
+            transform: scale(1);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(100);
+            opacity: 1;
+        }
+    }
+
+</style>
