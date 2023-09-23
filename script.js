@@ -63,10 +63,32 @@ function init ()
 
 }
 
-function showHiddenDescription(evt) {
-    evt.target.parentNode.parentNode.children[1].classList.toggle("hidden");
-    document.getElementById("body").classList.toggle("overflow-hidden");
+var styleSheetNumber;
+document.addEventListener("DOMContentLoaded", () => {
+    var styles = document.styleSheets;
+
+    for (var i=0; i<styles.length; i++) {
+        var href = styles[i].href;
+
+        if ( href == null ){
+            continue;
+        }
+        if (href.includes("style.css")) {
+            styleSheetNumber = i;
+        }
+    }
+
+});
+
+
+
+function toggleHiddenDescription(evt) {
+    var news = document.getElementById(evt);
+    if (news.classList.contains("hidden")) {
+        document.scrollingElement.scrollTop = 0;
+        document.styleSheets[styleSheetNumber].cssRules[3].style.filter = 'blur(10px)' 
+    } else {
+        document.styleSheets[styleSheetNumber].cssRules[3].style.filter = "none" 
+    }
+    news.classList.toggle("hidden");
 }
-
-
-
