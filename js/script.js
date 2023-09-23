@@ -1,4 +1,11 @@
 
+if (localStorage.getItem("filtered") === false || localStorage.getItem("filtered") === null) {
+    localStorage.setItem("filtered", false);
+
+    window.location.href = "humanFilter.html";
+}
+
+
 var styleSheetNumber;
 document.addEventListener("DOMContentLoaded", () => {
     var styles = document.styleSheets;
@@ -37,12 +44,10 @@ function fuelCalculator() {
     var fuelConsumption = document.getElementsByName("fuelConsumption")[0]; 
     var distance = document.getElementsByName("distance")[0]; 
 
-    // Check if fuel type is "gasolina" (assuming it's a dropdown with "gasolina" as one of the options)
     if (fuelType.value === "plasma") {
         // Calculate the result
         var result = (distance.value / fuelConsumption.value) * quantumFluxFactor.value * 0.618033 ;
         // Update the result input field
-        document.getElementsByName("fuelResult")[0].value = result;
     } else if (fuelType.value === "antimatter") {
         var result = (distance.value / fuelConsumption.value) * quantumFluxFactor.value * 0.718281;
     } else {
@@ -58,11 +63,14 @@ function ageCalculator() {
     const originalAge = parseFloat(document.getElementById("originalAge").value);
     const originalFactor = parseFloat(document.getElementById("originalFactor").value);
     const actualFactor = parseFloat(document.getElementById("actualFactor").value);
-
    
     const actualAge = (originalAge / originalFactor) * actualFactor;
 
-   
     // Display the result in the "Actual Age" input field
     document.getElementById("actualAge").value = actualAge.toFixed(2);
+}
+
+function resetHumanFilter() {
+    localStorage.setItem("filtered", false);
+    window.location.href = "humanFilter.html";
 }

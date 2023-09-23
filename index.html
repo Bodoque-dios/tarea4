@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/normalize.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>MIB</title>
@@ -165,7 +164,7 @@
         
         <!-- Report An Alien Sighting -->
         <section class="bg-black text-white flex justify-center items-center py-12">
-            <form id="alienForm" action="neuralizer.html" class="w-full max-w-lg p-4 bg-gray-800 rounded-lg shadow-lg">
+            <form id="alienForm" onsubmit="alert('Alien reported Succesfully')" class="w-full max-w-lg p-4 bg-gray-800 rounded-lg shadow-lg">
             <h2 class="text-3xl font-semibold mb-4 text-center text-green-500">Report An Alien Sighting</h2>
         
             <div class="mb-4">
@@ -197,7 +196,6 @@
         </section>
   
 
-        <!-- popup that neuralizes you if you get it wrong -->
     </main>
 
     <section id="hidden-news" class="dont-blur">
@@ -312,9 +310,22 @@
 
     </section>
 
-    <script>
-        init()
-    </script>
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-center md:text-left">
+                <p class="text-lg font-semibold">Not Men In Black</p>
+                <p class="text-sm">© 2023 No rights reserved</p>
+            </div>
+            <div class="text-center md:text-right mt-4 md:mt-0 hover:text-gray-400 transition duration-300">
+                <a href="https://github.com/Bodoque-dios/tarea4">GitHub</a>
+            </div>
+            <div>
+                <button onclick="resetHumanFilter()" class="hover:text-gray-400 transition duration-300" type="button">Reset Human Filter</button>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
 </body>
 
 </html>
